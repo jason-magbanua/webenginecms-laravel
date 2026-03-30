@@ -3,7 +3,7 @@
 
 @section('content')
 <h1 class="page-header">Settings</h1>
-<div class="alert alert-info">These settings apply for the current session only. To persist them, update your <code>.env</code> or <code>config/webengine.php</code>.</div>
+<div class="alert alert-info">Settings are stored in the database and take effect immediately on the next request.</div>
 
 <form method="POST" action="{{ route('admin.settings.update') }}">
     @csrf

@@ -30,6 +30,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/accounts/registrations', [AccountController::class, 'registrations'])->name('accounts.registrations');
     Route::get('/accounts/ip/{ip}', [AccountController::class, 'byIp'])->name('accounts.by-ip');
     Route::get('/accounts/{id}', [AccountController::class, 'show'])->name('accounts.show');
+    Route::put('/accounts/{id}', [AccountController::class, 'update'])->name('accounts.update');
 
     // Characters
     Route::get('/characters', [CharacterController::class, 'index'])->name('characters.index');
